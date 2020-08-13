@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  usersrv:
+    image: "usersrv:0.0.1"
+    hostname: usersrv
+    ports:
+      - "8000:8000"
+	environment:
+      # LOGGING
+      - LOG_FORMAT=${LOG_FORMAT}
+      # SERVER
+      - ADDRESS=${ADDRESS}
+      - JWT_SECRET=${JWT_SECRET}
+	restart: always
