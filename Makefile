@@ -107,7 +107,7 @@ _docker_build:
 _docker_postbuild:
 	cd deployment/docker; \
 	rm -rf $(PROJECT_NAME).bin 2> /dev/null;\
-	rm -rf web 2> /dev/null; \
+	rm -rf web 2> /dev/null;
 
 docker_build: _docker_prebuild _docker_build _docker_postbuild
 
@@ -117,7 +117,6 @@ docker:
 compose: docker
 	cd deployment/docker && docker-compose up
 
-
 _heroku_predeploy:
 	cd deployment/docker; \
 	heroku container:login; \
@@ -126,5 +125,4 @@ _heroku_predeploy:
 	heroku open --app usersrv
 
 heroku: _docker_prebuild _heroku_predeploy _docker_postbuild
-
 

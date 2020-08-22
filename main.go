@@ -7,9 +7,7 @@ import (
 
 func main() {
 	srv := user.New()
-
 	if err := server.New(server.FromEnv(), server.Web("/", "web", "index.html")).ListenAndServe(srv); err != nil {
 		panic(err)
 	}
-
 }

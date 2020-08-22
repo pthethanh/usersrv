@@ -54,7 +54,7 @@ Run the test by simply execute: `make`
 
 ## Coding style
 
-The code convention should follow https://github.com/golovers/effective-go
+The code convention should follow [effective-go](https://github.com/golovers/effective-go)
 
 All developers are required to run `make` before pushing the code to remote git.
 
@@ -110,4 +110,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 TBU
-	
